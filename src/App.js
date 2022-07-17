@@ -1,30 +1,35 @@
-import React, { Component } from "react";
-import { Route, Routes } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import NavBar from "./components/navBar";
-import Home from "./components/home";
+import Home from "./components/common/home";
 import ContactUs from "./components/contactUs";
 import Contribution from "./components/contribution";
+import NotFound from "./components/notFound";
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <React.Fragment>
+function App() {
+  return (
+    <>
+      <Router>
         <NavBar />
         <main className="container">
           <Routes>
-            {/* <Route exact path="/*" element={<AppBody />} /> */}
-            <Route path="/home" component={Home} />
-            <Route path="/contactUs" component={ContactUs} />
-            <Route path="/contribution" component={Contribution} />
-            {/* <Route path="/not-found" component={NotFound}></Route> */}
-            {/* <Redirect from="/" exact to="/home" />
-            <Redirect to="/not-found" /> */}
+            <Route path="/" exact element={<Home />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/contribution" element={<Contribution />} />
+            <Route path="/notFound" element={<NotFound />}></Route>
+            <Route path="/" element={<Navigate replace to="/home" />} />
+            <Route path="/*" element={<Navigate replace to="/notFound" />} />
           </Routes>
         </main>
-      </React.Fragment>
-    );
-  }
+      </Router>
+    </>
+  );
 }
 
 export default App;
