@@ -12,6 +12,7 @@ import Contribution from "./components/contribution";
 import NotFound from "./components/notFound";
 import "./App.css";
 import SignUp from "./components/signUp";
+import Footer from "./footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/*" element={<Navigate replace to="/notFound" />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 }

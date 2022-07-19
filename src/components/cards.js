@@ -12,8 +12,8 @@ function Cards() {
             <CardItem
               src="images/img-9.jpg"
               text="Lorem ipsom and id come add you later "
-              label="Charity"
-              path="contribution"
+              label="Support"
+              path="home"
             />
             <CardItem
               src="images/img-4.jpg"
@@ -26,20 +26,14 @@ function Cards() {
             <CardItem
               src="images/img-5.jpg"
               text="Lorem ipsom and id come add you later "
-              label="Charity"
-              path="contribution"
+              label="reach out"
+              path="contactUs"
             />
             <CardItem
               src="images/img-3.jpg"
               text="Lorem ipsom and id come add you later "
-              label="Charity"
-              path="contribution"
-            />
-            <CardItem
-              src="images/img-6.jpg"
-              text="Lorem ipsom and id come add you later "
-              label="Charity"
-              path="contribution"
+              label="sign up"
+              path="sign-up"
             />
           </ul>
         </div>
