@@ -1,7 +1,8 @@
 import React from "react";
+import "../App.css";
 
-const Contribution = () => {
-  return <h1>Contributions</h1>;
-};
+function contribution() {
+  return <h1 className="contribution">Contributions</h1>;
+}
 
-export default Contribution;
+export default contribution;

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navBar.css";
-// import NavBar from "./navBar";
 import { Button } from "./Button";
 
 function NavBar() {
-  const { click, setClick } = useState(false);
+  const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
@@ -21,6 +20,7 @@ function NavBar() {
   useEffect(() => {
     showButton();
   }, []);
+
   window.addEventListener("resize", showButton);
   return (
     <>
@@ -28,23 +28,11 @@ function NavBar() {
         <div className="navbar-container">
           <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
             Helping Hands
-            <i className="fab fa-typo3" />
+            <i className="fab fa-typo3"></i>
           </Link>
 
-          {/* <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button> */}
-
           <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fab fa-bars"} />
+            <i className={click ? "fa fa-times" : "fa fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
@@ -82,20 +70,6 @@ function NavBar() {
           </ul>
           {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
-
-        {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <NavLink className="nav-item nav-link" to="/home">
-              Home <span className="sr-only">(current)</span>
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/contribution">
-              Contribution
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="contactus">
-              Contact Us
-            </NavLink>
-          </div>
-        </div> */}
       </nav>
     </>
   );

@@ -1,7 +1,8 @@
 import React from "react";
+import "../App.css";
 
-const ContactUs = () => {
-  return <h1>Contact us</h1>;
-};
+function contactUs() {
+  return <h1 className="contactUs">Contact Us</h1>;
+}
 
-export default ContactUs;
+export default contactUs;

@@ -11,22 +11,22 @@ import ContactUs from "./components/contactUs";
 import Contribution from "./components/contribution";
 import NotFound from "./components/notFound";
 import "./App.css";
+import SignUp from "./components/signUp";
 
 function App() {
   return (
     <>
       <Router>
         <NavBar />
-        <main className="container">
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/contribution" element={<Contribution />} />
-            <Route path="/notFound" element={<NotFound />}></Route>
-            <Route path="/" element={<Navigate replace to="/home" />} />
-            <Route path="/*" element={<Navigate replace to="/notFound" />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/contribution" element={<Contribution />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/notFound" element={<NotFound />}></Route>
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/*" element={<Navigate replace to="/notFound" />} />
+        </Routes>
       </Router>
     </>
   );
