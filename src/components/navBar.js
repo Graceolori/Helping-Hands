@@ -24,7 +24,7 @@ function NavBar() {
   window.addEventListener("resize", showButton);
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar sticky-top">
         <div className="navbar-container">
           <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
             Helping Hands
@@ -41,29 +41,17 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/contribution"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/contribution" className="nav-links" onClick={closeMobileMenu}>
                 Contributions
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/contactUs"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/contactUs" className="nav-links" onClick={closeMobileMenu}>
                 Contact Us
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
                 Sign Up
               </Link>
             </li>
